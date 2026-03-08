@@ -36,7 +36,8 @@ dynamic = ["version", "readme"]
 
 [dependency-groups]
 dev = [
-  "pytest >=8.1.1,<9"
+  "pytest >=8.1.1,<9",
+  "ty>=0.0.21",
 ]
 
 [tool.maturin]
