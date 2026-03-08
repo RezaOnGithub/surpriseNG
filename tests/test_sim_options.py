@@ -2,7 +2,6 @@
 Module for testing the sim_options parameter.
 """
 
-
 from itertools import combinations
 
 import pytest

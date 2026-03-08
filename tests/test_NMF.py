@@ -2,7 +2,6 @@
 Module for testing the NMF algorithm.
 """
 
-
 import pandas as pd
 import pytest
 

@@ -2,7 +2,6 @@
 Module for testing the model_selection.search module.
 """
 
-
 import os
 
 import numpy as np

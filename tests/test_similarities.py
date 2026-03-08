@@ -2,7 +2,6 @@
 Module for testing the similarity measures
 """
 
-
 import random
 
 import numpy as np
@@ -58,8 +57,7 @@ def test_cosine_sim():
     # check for float point support and computation correctness
     dot_product56 = 1 * 1.5 + 3 * 3.5 + 2 * 2.5
     assert sim[5, 6] == (
-        dot_product56
-        / ((1**2 + 3**2 + 2**2) * (1.5**2 + 3.5**2 + 2.5**2)) ** 0.5
+        dot_product56 / ((1**2 + 3**2 + 2**2) * (1.5**2 + 3.5**2 + 2.5**2)) ** 0.5
     )
 
     # ensure min_support is taken into account. Only users 1 and 2 have more

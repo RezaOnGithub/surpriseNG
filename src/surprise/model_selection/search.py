@@ -83,8 +83,7 @@ class BaseSearchCV(ABC):
 
         if self.refit and isinstance(data, DatasetUserFolds):
             raise ValueError(
-                "refit cannot be used when data has been "
-                "loaded with load_from_folds()."
+                "refit cannot be used when data has been loaded with load_from_folds()."
             )
 
         cv = get_cv(self.cv)

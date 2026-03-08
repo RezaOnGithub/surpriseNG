@@ -29,7 +29,6 @@ pkf = PredefinedKFold()
 algo = SVD()
 
 for trainset, testset in pkf.split(data):
-
     # train and test algorithm.
     algo.fit(trainset)
     predictions = algo.test(testset)

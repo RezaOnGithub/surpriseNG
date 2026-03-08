@@ -2,7 +2,6 @@
 Module for testing prediction algorithms.
 """
 
-
 import os
 
 import pytest

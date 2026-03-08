@@ -1,6 +1,5 @@
 """Module for testing the dump module."""
 
-
 import random
 import tempfile
 

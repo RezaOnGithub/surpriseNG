@@ -19,7 +19,6 @@ def precision_recall_at_k(predictions, k=10, threshold=3.5):
     precisions = dict()
     recalls = dict()
     for uid, user_ratings in user_est_true.items():
-
         # Sort user ratings by estimated value
         user_ratings.sort(key=lambda x: x[0], reverse=True)
 

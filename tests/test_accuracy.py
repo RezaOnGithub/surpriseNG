@@ -1,6 +1,5 @@
 """Module for testing accuracy evaluation measures (RMSE, MAE...)"""
 
-
 from math import sqrt
 
 import pytest

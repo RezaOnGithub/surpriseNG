@@ -2,7 +2,6 @@
 This module descibes how to use cross-validation iterators.
 """
 
-
 from surprise import accuracy, Dataset, SVD
 from surprise.model_selection import KFold
 
@@ -15,7 +14,6 @@ kf = KFold(n_splits=3)
 algo = SVD()
 
 for trainset, testset in kf.split(data):
-
     # train and test algorithm.
     algo.fit(trainset)
     predictions = algo.test(testset)

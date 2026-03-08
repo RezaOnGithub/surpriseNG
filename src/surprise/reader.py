@@ -1,6 +1,5 @@
 """This module contains the Reader class."""
 
-
 from .builtin_datasets import BUILTIN_DATASETS
 
 
@@ -103,7 +102,7 @@ class Reader:
 
         except IndexError:
             raise ValueError(
-                "Impossible to parse line. Check the line_format" " and sep parameters."
+                "Impossible to parse line. Check the line_format and sep parameters."
             )
 
         return uid, iid, float(r), timestamp

@@ -2,7 +2,6 @@
 Module for testing the Reader class.
 """
 
-
 import pytest
 
 from surprise import Reader

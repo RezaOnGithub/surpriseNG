@@ -3,7 +3,6 @@ This module descibes how to test the performances of an algorithm on the
 trainset.
 """
 
-
 from surprise import accuracy, Dataset, SVD
 from surprise.model_selection import KFold
 

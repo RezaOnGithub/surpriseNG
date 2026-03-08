@@ -2,7 +2,6 @@
 This module contains the pytest fixtures.
 """
 
-
 import os
 
 import pytest

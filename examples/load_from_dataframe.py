@@ -2,7 +2,6 @@
 This module descibes how to load a dataset from a pandas dataframe.
 """
 
-
 import pandas as pd
 
 from surprise import Dataset, NormalPredictor, Reader

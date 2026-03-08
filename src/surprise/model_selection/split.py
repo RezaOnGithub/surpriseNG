@@ -45,8 +45,9 @@ def get_cv(cv):
         return cv  # str have split
 
     raise ValueError(
-        "Wrong CV object. Expecting None, an int or CV iterator, "
-        "got a {}".format(type(cv))
+        "Wrong CV object. Expecting None, an int or CV iterator, got a {}".format(
+            type(cv)
+        )
     )
 
 
@@ -222,16 +223,16 @@ class ShuffleSplit:
 
         if n_splits <= 0:
             raise ValueError(
-                "n_splits = {} should be strictly greater than " "0.".format(n_splits)
+                "n_splits = {} should be strictly greater than 0.".format(n_splits)
             )
         if test_size is not None and test_size <= 0:
             raise ValueError(
-                "test_size={} should be strictly greater than " "0".format(test_size)
+                "test_size={} should be strictly greater than 0".format(test_size)
             )
 
         if train_size is not None and train_size <= 0:
             raise ValueError(
-                "train_size={} should be strictly greater than " "0".format(train_size)
+                "train_size={} should be strictly greater than 0".format(train_size)
             )
 
         self.n_splits = n_splits
@@ -244,14 +245,16 @@ class ShuffleSplit:
 
         if test_size is not None and test_size >= n_ratings:
             raise ValueError(
-                "test_size={} should be less than the number of "
-                "ratings {}".format(test_size, n_ratings)
+                "test_size={} should be less than the number of ratings {}".format(
+                    test_size, n_ratings
+                )
             )
 
         if train_size is not None and train_size >= n_ratings:
             raise ValueError(
-                "train_size={} should be less than the number of"
-                " ratings {}".format(train_size, n_ratings)
+                "train_size={} should be less than the number of ratings {}".format(
+                    train_size, n_ratings
+                )
             )
 
         if np.asarray(test_size).dtype.kind == "f":
@@ -291,7 +294,6 @@ class ShuffleSplit:
         rng = get_rng(self.random_state)
 
         for _ in range(self.n_splits):
-
             if self.shuffle:
                 permutation = rng.permutation(len(data.raw_ratings))
             else:
@@ -420,7 +422,7 @@ class LeaveOneOut:
 
             if not raw_trainset:
                 raise ValueError(
-                    "Could not build any trainset. Maybe " "min_n_ratings is too high?"
+                    "Could not build any trainset. Maybe min_n_ratings is too high?"
                 )
             trainset = data.construct_trainset(raw_trainset)
             testset = data.construct_testset(raw_testset)
@@ -453,7 +455,6 @@ class PredefinedKFold:
 
         self.n_splits = len(data.folds_files)
         for train_file, test_file in data.folds_files:
-
             raw_trainset = data.read_ratings(train_file)
             raw_testset = data.read_ratings(test_file)
             trainset = data.construct_trainset(raw_trainset)
