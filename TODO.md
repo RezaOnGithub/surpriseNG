@@ -1,6 +1,23 @@
 TODO
 ====
 
+- Add the `ruff` nuke to `.git-blame-ignore-revs` also.
+
+- Update classifiers in `pyproject.toml`?
+
+- Tune dependencies to a reasonable minimum
+
+- Restore executable functionality?
+
+  ```toml
+  [project.scripts]
+  surprise = "surprise.__main__:main"
+  ```
+
+
+Original `surprise` TODO
+========================
+
 * remove offset from everywhere (Reader, Trainset, test(), predict()...). Make
   a test to make sure that zero ratings are handled correctly. Right now we
   store ratings as defaultdict(list) in ur and ir, so there's no problem. Maybe
